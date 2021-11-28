@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f5fe;
+}
+h1{
+    text-align: center;
+    margin:50px 0;
+    color: #080a3c;
+    position: relative;
+}
+.box1 h1::before{
+    content: "$";
+    position: absolute;
+    font-size: 24px;
+    right: 18px;
+}
+
+.box1 h1::after{
+    content: "/monthly";
+    position: absolute;
+    font-size: 14px;
+    top: 18px;
+    left: 22px;
+}
+
+.box2 h1::before, .box3 h1::after{
+    content: "$";
+    position: absolute;
+    font-size: 24px;
+    right: 37px;
+}
+
+.box2 h1::after,.box3 h1::after{
+    content: "/monthly";
+    position: absolute;
+    font-size: 14px;
+    top: 18px;
+    left: 40px;
+}
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subcontainer{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.date{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    border-radius: 50px;
+}
+
+.monthly{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: white;
+    transition: 1s;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.fas{
+    margin:0 8px;
+    color: #ff612f;
+}
+.yearly{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: white;
+    transition: 1s;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.monthly:focus,.yearly:focus{
+    cursor: pointer;
+    color: white;
+    background-color: #080a3c;
+}
+
+
+.box1,.box2,.box3{
+    width: 32%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 7px;
+    transition: 1s;
+    transition-timing-function: ease;
+}
+
+.box1:hover,.box2:hover,.box3:hover{
+    box-shadow: 0 10px 30px rgb(0 0 0 / 7%);
+    transform: translateY(-10px);
+}
+
+.list li{
+    margin: 10px 0 ;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    width: 300px;
+}
+.box1> a,.box2> a,.box3> a{
+    margin-top: 30px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #080a3c;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding:15px 20px;
+    border-radius: 8px;
+    transition: 1s;
+}
+
+.fa-check-circle{
+    color: #13c4a1;
+}
+
+.box1> a:hover,.box2> a:hover,.box3> a:hover{
+    background-color: #13c4a1;
+}
+.box1 .fab,.box2 .fab,.box3 .fab{
+    color: #ff612f;
+}
